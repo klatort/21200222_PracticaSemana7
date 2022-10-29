@@ -22,9 +22,13 @@ public class Vuelo {
         this.asientos = asientos;
     }
     
-    public boolean venderAsiento(String nroAsiento, char fila){
-        
-        return true;
+    public boolean venderAsiento(int nroAsiento, char fila){
+        for(Asiento it: asientos){
+            if(it.getNroAsiento() == nroAsiento && it.getFila() == fila){
+                    return it.venderAsiento();
+            }
+        }
+        return false;
     }
     
     public Asiento[] asientosDisponibles(){
@@ -41,11 +45,11 @@ public class Vuelo {
         return aux;
     }
     
-    public boolean reservarAsiento(String nroAsiento, char fila){
+    public boolean reservarAsiento(int nroAsiento, char fila){
         return true;
     }
     
-    public boolean cancelarAsiento(String nroAsiento, char fila){
+    public boolean cancelarAsiento(int nroAsiento, char fila){
         return true;
     }
 }

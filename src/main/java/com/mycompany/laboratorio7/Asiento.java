@@ -39,7 +39,7 @@ public class Asiento {
         return false;
     }
     
-    public int nroAsiento(){
+    public int getNroAsiento(){
         return this.nroAsiento;
     }
     
