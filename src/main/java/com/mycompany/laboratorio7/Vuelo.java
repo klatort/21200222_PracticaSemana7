@@ -13,12 +13,16 @@ public class Vuelo {
     private String fecha;
     private String hora;
     private Asiento[] asientos;
+    private Aereopuerto llegada;
+    private Aereopuerto salida;
     
-    public Vuelo(String codigo, String fecha, String hora,
-            Asiento[] asientos){
+    public Vuelo(String codigo, String fecha, String hora, 
+            Aereopuerto salida, Aereopuerto llegada){
         this.codigo = codigo;
         this.fecha = fecha;
         this.hora = hora;
+        this.salida = salida;
+        this.llegada = llegada;
         this.asientos = new Asiento[56];
         int cont = 0;
         for(char i = 'A'; i <= 'G'; i++){

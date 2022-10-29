@@ -12,7 +12,15 @@ package com.mycompany.laboratorio7;
 public class App {
 
     public static void main(String[] args) {
-        Asiento asiento1 = new asiento(1, 'A')
+        Aereopuerto aereopuerto1 = new Aereopuerto("Jorge Chavez", "Av. Elmer Faucett s/n, Callao 07031");
+        Aereopuerto aereopuerto2 = new Aereopuerto("Alfredo Rodríguez Ballón", "Av. Aeropuerto S/N, Cerro Colorado 04017");
+        Ciudad[] ciudades = new Ciudad[2];
+        Ciudad ciudad1 = new Ciudad("20200030", "Lima", aereopuerto1);
+        Ciudad ciudad2 = new Ciudad("20200120", "Arequipa", aereopuerto1);
+        Pais peru = new Pais("PER", "Perú", ciudades);
+        Vuelo vuelo1 = new Vuelo("21200221", "31/09/2022", "21:00", aereopuerto1, aereopuerto2);
+        Vuelo vuelo2 = new Vuelo("21200033", "1/10/2022", "22:00", aereopuerto2, aereopuerto1);
+        
         System.out.println("Hello World!");
     }
 }
