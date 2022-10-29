@@ -54,4 +54,9 @@ public class Asiento {
         return this.estado;
     }
     
+    @Override
+    public String toString(){
+        String result = "nAsiento: " + this.nroAsiento + " Fila: " + this.estado + " Estado: " + this.estado;
+        return result;
+    }
 }
