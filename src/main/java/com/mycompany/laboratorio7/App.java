@@ -12,6 +12,7 @@ package com.mycompany.laboratorio7;
 public class App {
 
     public static void main(String[] args) {
+        Asiento asiento1 = new asiento(1, 'A')
         System.out.println("Hello World!");
     }
 }

@@ -19,7 +19,14 @@ public class Vuelo {
         this.codigo = codigo;
         this.fecha = fecha;
         this.hora = hora;
-        this.asientos = asientos;
+        this.asientos = new Asiento[56];
+        int cont = 0;
+        for(char i = 'A'; i <= 'G'; i++){
+            for(int j = 1; j <= 8; j++){
+                this.asientos[cont] = new Asiento(j, i);
+                cont++;
+            }
+        }
     }
     
     public boolean venderAsiento(int nroAsiento, char fila){
@@ -46,10 +53,20 @@ public class Vuelo {
     }
     
     public boolean reservarAsiento(int nroAsiento, char fila){
-        return true;
+        for(Asiento it: asientos){
+            if(it.getNroAsiento() == nroAsiento && it.getFila() == fila){
+                    return it.reservarAsiento();
+            }
+        }
+        return false;
     }
     
     public boolean cancelarAsiento(int nroAsiento, char fila){
-        return true;
+        for(Asiento it: asientos){
+            if(it.getNroAsiento() == nroAsiento && it.getFila() == fila){
+                    return it.cancelarAsiento();
+            }
+        }
+        return false;
     }
 }

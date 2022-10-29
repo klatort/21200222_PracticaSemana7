@@ -13,18 +13,21 @@ public class Asiento {
     private char fila;
     private String estado;
     
-    public Asiento(int nroAsiento, char fila, String estado){
+    public Asiento(int nroAsiento, char fila){
         this.nroAsiento = nroAsiento;
         this.fila = fila;
-        this.estado = estado;
+        this.estado = "Libre";
     }
     public boolean reservarAsiento(){
-        this.estado = "Ocupado";
-        return true;
+        if("Libre".equals(this.estado)){
+            this.estado = "Reservado";
+            return true;
+        }
+        return false;
     }
     
     public boolean cancelarAsiento(){
-        if("Comprado".equals(this.estado)){
+        if("Comprado".equals(this.estado) || "Libre".equals(this.estado)){
             return false;
         }
         this.estado = "Libre";
