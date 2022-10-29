@@ -27,7 +27,16 @@ public class Vuelo {
     }
     
     public Asiento[] asientosDisponibles(){
-        Asiento[] aux = new Asiento[10];
+        Asiento[] aux = new Asiento[0];
+        int cont = 0;
+        for(Asiento it: this.asientos){
+            if(it.getEstado() == "Libre"){
+                Asiento[] aux2 = new Asiento[cont + 1];
+                aux2[cont] = it;
+                cont++;
+                aux = aux2;
+            }
+        }
         return aux;
     }
     

@@ -29,4 +29,7 @@ public class Asiento {
     public boolean venderAsiento(){
         return true;
     }
+    public String getEstado(){
+        return this.estado;
+    }
 }
