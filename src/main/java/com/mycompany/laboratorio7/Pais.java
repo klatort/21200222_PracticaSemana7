@@ -19,7 +19,7 @@ public class Pais {
         this.ciudades = ciudades;
     }
     
-    public Ciudad[] getCiudades(){
+    public Ciudad[] getCiudades(/*codPais*/){
         return this.ciudades;
     }
 }

@@ -19,7 +19,7 @@ public class Ciudad {
         this.aereopuerto = aereopuerto;
     }
     
-    public Aereopuerto getAereopuerto(String codCiudad){
+    public Aereopuerto getAereopuerto(/*String codCiudad*/){
         return this.aereopuerto;
     }
 }
