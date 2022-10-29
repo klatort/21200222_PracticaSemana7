@@ -9,5 +9,11 @@ package com.mycompany.laboratorio7;
  * @author Fabo
  */
 public class Aereopuerto {
+    private String nombre;
+    private String direccion;
     
+    public Aereopuerto(String nombre, String direccion){
+        this.nombre = nombre;
+        this.direccion = direccion;
+    }
 }

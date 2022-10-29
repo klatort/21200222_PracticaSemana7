@@ -9,5 +9,30 @@ package com.mycompany.laboratorio7;
  * @author Fabo
  */
 public class Vuelo {
+    private String codigo;
+    private String fecha;
+    private String hora;
     
+    public Vuelo(String codigo, String fecha, String hora){
+        this.codigo = codigo;
+        this.fecha = fecha;
+        this.hora = hora;
+    }
+    
+    public boolean venderAsiento(String nroAsiento, char fila){
+        return true;
+    }
+    
+    public Asiento[] asientosDisponibles(){
+        Asiento[] aux = new Asiento[10];
+        return aux;
+    }
+    
+    public boolean reservarAsiento(String nroAsiento, char fila){
+        return true;
+    }
+    
+    public boolean cancelarAsiento(String nroAsiento, char fila){
+        return true;
+    }
 }
