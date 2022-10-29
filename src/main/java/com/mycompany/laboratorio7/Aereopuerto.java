@@ -10,10 +10,15 @@ package com.mycompany.laboratorio7;
  */
 public class Aereopuerto {
     private String nombre;
-    private String direccion;
+    private String direccion;    
+    private Vuelo[] llegada;
+    private Vuelo[] salida;
     
-    public Aereopuerto(String nombre, String direccion){
+    public Aereopuerto(String nombre, String direccion, 
+            Vuelo[] llegada, Vuelo[] salida){
         this.nombre = nombre;
         this.direccion = direccion;
+        this.llegada = llegada;
+        this.salida = salida;
     }
 }

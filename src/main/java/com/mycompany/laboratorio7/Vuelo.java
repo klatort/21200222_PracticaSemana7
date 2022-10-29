@@ -12,11 +12,14 @@ public class Vuelo {
     private String codigo;
     private String fecha;
     private String hora;
+    private Asiento[] asientos;
     
-    public Vuelo(String codigo, String fecha, String hora){
+    public Vuelo(String codigo, String fecha, String hora,
+            Asiento[] asientos){
         this.codigo = codigo;
         this.fecha = fecha;
         this.hora = hora;
+        this.asientos = asientos;
     }
     
     public boolean venderAsiento(String nroAsiento, char fila){
