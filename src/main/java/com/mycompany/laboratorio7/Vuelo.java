@@ -8,6 +8,6 @@ package com.mycompany.laboratorio7;
  *
  * @author Fabo
  */
-public class Cliente extends Persona{
+public class Vuelo {
     
 }
