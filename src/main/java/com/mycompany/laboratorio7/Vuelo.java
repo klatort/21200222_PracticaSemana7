@@ -23,6 +23,7 @@ public class Vuelo {
     }
     
     public boolean venderAsiento(String nroAsiento, char fila){
+        
         return true;
     }
     
@@ -30,7 +31,7 @@ public class Vuelo {
         Asiento[] aux = new Asiento[0];
         int cont = 0;
         for(Asiento it: this.asientos){
-            if(it.getEstado() == "Libre"){
+            if("Libre".equals(it.getEstado())){
                 Asiento[] aux2 = new Asiento[cont + 1];
                 aux2[cont] = it;
                 cont++;
