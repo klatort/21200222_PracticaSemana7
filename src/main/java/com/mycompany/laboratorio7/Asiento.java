@@ -27,11 +27,19 @@ public class Asiento {
     }
     
     public boolean cancelarAsiento(){
-        if("Comprado".equals(this.estado) || "Libre".equals(this.estado)){
-            return false;
+        if("Reservado".equals(this.estado)){
+            this.estado = "Libre";
+            return true;
         }
-        this.estado = "Libre";
         return true;
+    }
+    
+    public boolean comprarAsiento(){
+        if("Reservado".equals(this.estado)){
+            this.estado = "Comprado";
+            return true;
+        }
+        return false;
     }
     
     public boolean venderAsiento(){
@@ -56,7 +64,7 @@ public class Asiento {
     
     @Override
     public String toString(){
-        String result = "nAsiento: " + this.nroAsiento + " Fila: " + this.estado + " Estado: " + this.estado;
+        String result = "nAsiento: " + this.nroAsiento + " Fila: " + this.fila + " Estado: " + this.estado;
         return result;
     }
 }

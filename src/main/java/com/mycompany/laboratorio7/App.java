@@ -21,11 +21,13 @@ public class App {
         Vuelo vuelo1 = new Vuelo("21200221", "31/09/2022", "21:00", aereopuerto1, aereopuerto2);
         Vuelo vuelo2 = new Vuelo("21200033", "1/10/2022", "22:00", aereopuerto2, aereopuerto1);
         
-        var asientosDispVuelo1 = vuelo1.asientosDisponibles();
-        
-        for(var it: asientosDispVuelo1){
-            System.out.println(it.toString());
-        }       
-       
+        vuelo1.imprimirAsientosDisp();
+        vuelo1.reservarAsiento(5, 'C');
+        vuelo1.imprimirAsientos();
+        System.out.println(vuelo1.cancelarAsiento(5, 'C'));
+        System.out.println(vuelo1.cancelarAsiento(5, 'C'));
+        System.out.println(vuelo1.comprarAsiento(5, 'C'));
+        vuelo1.reservarAsiento(5, 'C');
+        System.out.println(vuelo1.comprarAsiento(5, 'C')); 
     }
 }

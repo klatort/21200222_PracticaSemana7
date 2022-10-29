@@ -48,6 +48,7 @@ public class Vuelo {
         for(Asiento it: this.asientos){
             if("Libre".equals(it.getEstado())){
                 Asiento[] aux2 = new Asiento[cont + 1];
+                System.arraycopy(aux, 0, aux2, 0, cont);
                 aux2[cont] = it;
                 cont++;
                 aux = aux2;
@@ -72,5 +73,28 @@ public class Vuelo {
             }
         }
         return false;
+    }
+    
+    public boolean comprarAsiento(int nroAsiento, char fila){
+        for(Asiento it: asientos){
+            if(it.getNroAsiento() == nroAsiento && it.getFila() == fila){
+                    return it.comprarAsiento();
+            }
+        }
+        return false;
+    }
+    
+    public void imprimirAsientosDisp(){
+        Asiento[] asientosDisp = this.asientosDisponibles();
+        
+        for(Asiento it: asientosDisp){
+            System.out.println(it);
+        }
+    }
+    
+    public void imprimirAsientos(){
+        for(Asiento it: asientos){
+            System.out.println(it);
+        }
     }
 }
