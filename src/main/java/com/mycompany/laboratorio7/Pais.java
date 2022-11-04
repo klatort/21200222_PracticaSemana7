@@ -11,15 +11,9 @@ package com.mycompany.laboratorio7;
 public class Pais {
     private String codigo;
     private String nombre;
-    private Ciudad[] ciudades;
     
-    public Pais(String codigo, String nombre, Ciudad[] ciudades){
+    public Pais(String codigo, String nombre){
         this.codigo = codigo;
         this.nombre = nombre;
-        this.ciudades = ciudades;
-    }
-    
-    public Ciudad[] getCiudades(/*codPais*/){
-        return this.ciudades;
     }
 }
