@@ -11,9 +11,11 @@ package com.mycompany.laboratorio7;
 public class Aereopuerto {
     private String nombre;
     private String direccion;
+    private Ciudad ciudadOrigen;
     
-    public Aereopuerto(String nombre, String direccion){
+    public Aereopuerto(String nombre, String direccion, Ciudad ciudadOrigen){
         this.nombre = nombre;
         this.direccion = direccion;
+        this.ciudadOrigen = ciudadOrigen;
     }
 }

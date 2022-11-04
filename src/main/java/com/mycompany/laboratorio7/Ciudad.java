@@ -11,15 +11,9 @@ package com.mycompany.laboratorio7;
 public class Ciudad {
     private String codigo;
     private String nombre;
-    private Aereopuerto aereopuerto;
     
-    public Ciudad(String codigo, String nombre, Aereopuerto aereopuerto){
+    public Ciudad(String codigo, String nombre){
         this.codigo = codigo;
         this.nombre = nombre;
-        this.aereopuerto = aereopuerto;
-    }
-    
-    public Aereopuerto getAereopuerto(/*String codCiudad*/){
-        return this.aereopuerto;
     }
 }
